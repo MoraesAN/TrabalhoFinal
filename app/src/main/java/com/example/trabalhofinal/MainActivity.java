@@ -41,35 +41,35 @@ public class MainActivity extends AppCompatActivity {
         double result = Imc.calcularIMC(Double.parseDouble(edtPeso.getText().toString()), Double.parseDouble(edtAltura.getText().toString()));
 
         if (result >= 18.9 && result <= 24.9){
-            txtResultadoIMC.setText("@String/imcNormal"+ String.format("%.1f", result)+"Kg/m²");
+            txtResultadoIMC.setText(getString(R.string.imcNormal)+ String.format("%.1f", result)+"Kg/m²");
             imgIMC.setVisibility(View.VISIBLE);
             imgIMC.setBackgroundResource(R.drawable.imcnormal);
         }else if (result >= 25.0 && result <= 29.9){
-            txtResultadoIMC.setText("SOBREPESO - "+ String.format("%.1f", result)+"Kg/m²");
+            txtResultadoIMC.setText(getString(R.string.imcSobrepeso)+ String.format("%.1f", result)+"Kg/m²");
             imgIMC.setVisibility(View.VISIBLE);
             imgIMC.setBackgroundResource(R.drawable.imcacima);
         }else if (result >= 30.0 && result <= 39.9){
-            txtResultadoIMC.setText("OBESIDADE - "+ String.format("%.1f", result)+"Kg/m²");
+            txtResultadoIMC.setText(getString(R.string.imcObeso)+ String.format("%.1f", result)+"Kg/m²");
             imgIMC.setVisibility(View.VISIBLE);
             imgIMC.setBackgroundResource(R.drawable.imcobesidade);
         }else if (result >= 40.0){
-            txtResultadoIMC.setText("OBESIDADE GRAVE - "+ String.format("%.1f", result)+"Kg/m²");
+            txtResultadoIMC.setText(getString(R.string.imcObesoGrave)+ String.format("%.1f", result)+"Kg/m²");
             imgIMC.setVisibility(View.VISIBLE);
             imgIMC.setBackgroundResource(R.drawable.imcobesidade3);
         }else if (result <= 18.8){
-            txtResultadoIMC.setText("MAGREZA - "+ String.format("%.1f", result)+"Kg/m²");
+            txtResultadoIMC.setText(getString(R.string.imcMagreza)+ String.format("%.1f", result)+"Kg/m²");
             imgIMC.setVisibility(View.VISIBLE);
             imgIMC.setBackgroundResource(R.drawable.imcabaixo);
         }
-        txtPesoIdeal.setText("@String/pesoIdeal - "+String.format("%.1f", Imc.pesoIdeal(Double.parseDouble(edtAltura.getText().toString())))+"Kg/m²");
-        fala("@String/nota");
+        txtPesoIdeal.setText(getString(R.string.pesoIdeal)+String.format("%.1f", Imc.pesoIdeal(Double.parseDouble(edtAltura.getText().toString())))+"Kg/m²");
+        fala(getString(R.string.nota));
     }
     public void fala (String text){
         tts = new TextToSpeech(this, new TextToSpeech.OnInitListener() {
             @Override
             public void onInit(int status) {
                 if (status == TextToSpeech.SUCCESS) {
-                    tts.speak(text, TextToSpeech.QUEUE_FLUSH, null);
+                    tts.speak(text, TextToSpeech.QUEUE_ADD, null);
                 }
             }
         });
