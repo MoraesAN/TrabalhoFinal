@@ -5,4 +5,9 @@ public class Imc {
         // p = peso e a = altura
         return p/(Math.pow(a , 2));
     }
+
+    public static double pesoIdeal(double a){
+        return (a - 100)*0.90;
+    }
+
 }
