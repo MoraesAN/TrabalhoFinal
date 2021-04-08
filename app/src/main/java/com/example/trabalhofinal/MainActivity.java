@@ -13,6 +13,7 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
 
     private EditText edtPeso, edtAltura;
+
     private TextView txtResultadoIMC;
     private ImageView imgIMC;
     private TextToSpeech tts;
@@ -27,6 +28,8 @@ public class MainActivity extends AppCompatActivity {
         txtResultadoIMC = findViewById(R.id.txtResultadoIMC);
         imgIMC = findViewById(R.id.imgIMC);
 
+        edtAltura.addTextChangedListener(new MaskWatcher("#.##"));
+
 
     }
 
@@ -34,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
         double result = Imc.calcularIMC(Double.parseDouble(edtPeso.getText().toString()), Double.parseDouble(edtAltura.getText().toString()));
 
         if (result >= 18.9 && result <= 24.9){
-            txtResultadoIMC.setText("NORMAL - "+ String.format("%.1f", result));
+            txtResultadoIMC.setText("@String/imcNormal"+ String.format("%.1f", result));
             imgIMC.setVisibility(View.VISIBLE);
             imgIMC.setBackgroundResource(R.drawable.imcnormal);
             fala("você ta fitness, maravilhoso!!!");

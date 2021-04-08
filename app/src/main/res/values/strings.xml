@@ -1,3 +1,17 @@
 <resources>
     <string name="app_name">TrabalhoFinal</string>
+    <string name="aba1">IMC - Índice de Massa Corpórea</string>
+
+    <string name="imcMagreza">Magreza - </string>
+    <string name="imcNormal">Normal - </string>
+    <string name="imcSobrepeso">Sobrepeso - </string>
+    <string name="imcObeso">Obesidade - </string>
+    <string name="imcObesoGrave">Obesidade Grave - </string>
+
+    <string name="txtMagreza">TrabalhoFinal</string>
+    <string name="txtNormal">Normal - </string>
+    <string name="txtSobrepeso">Sobrepeso - </string>
+    <string name="txtObeso">Obesidade - </string>
+    <string name="txtObesoGrave">Obesidade Grave - </string>
+
 </resources>
