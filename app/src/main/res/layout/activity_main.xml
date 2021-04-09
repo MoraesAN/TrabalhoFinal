@@ -25,6 +25,7 @@
         android:layout_margin="10dp"
         android:ems="10"
         android:gravity="center"
+        android:imeOptions="actionNext"
         android:hint="Peso"
         android:inputType="numberSigned|numberDecimal" />
 
@@ -36,6 +37,7 @@
         android:ems="10"
         android:gravity="center"
         android:hint="Altura"
+        android:imeOptions="actionDone"
         android:inputType="numberSigned|numberDecimal"
         android:maxLength="4" />
 
