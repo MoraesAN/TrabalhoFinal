@@ -9,7 +9,7 @@
     <string name="imcObeso">Obesidade - </string>
     <string name="imcObesoGrave">Obesidade Grave - </string>
 
-    <string name="nota">Uma medida simples baseada em peso e altura, o IMC é amplamente utilizado para avaliar se uma pessoa tem um peso saudável. No entanto, sua confiabilidade é frequentemente criticada, já que distingue gordura de músculo e não nos diz onde a gordura corporal é armazenada.</string>
+    <string name="nota">O IMC é amplamente utilizado para avaliar se uma pessoa tem um peso saudável. No entanto, o cálculo não distingue gordura de músculo.</string>
 
 
 </resources>

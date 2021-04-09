@@ -7,7 +7,7 @@ public class Imc {
     }
 
     public static double pesoIdeal(double a){
-        return (a - 100)*0.90;
+        return ((a - 100)*0.80)*-1;
     }
 
 }
