@@ -1,4 +1,4 @@
-package com.example.trabalhofinal;
+package com.example.trabalhofinal.IMC;
 
 public class Imc {
     public static double calcularIMC(double p, double a){ return p/(Math.pow(a , 2));}

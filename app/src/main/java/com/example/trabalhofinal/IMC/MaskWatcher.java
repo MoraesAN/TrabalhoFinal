@@ -1,4 +1,4 @@
-package com.example.trabalhofinal;
+package com.example.trabalhofinal.IMC;
 
 import android.text.Editable;
 import android.text.TextWatcher;

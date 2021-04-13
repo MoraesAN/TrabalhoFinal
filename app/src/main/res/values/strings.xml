@@ -10,8 +10,11 @@
     <string name="imcObesoGrave">Obesidade Grave - </string>
 
     <string name="nota">O IMC é amplamente utilizado para avaliar se uma pessoa tem um peso saudável. No entanto, o cálculo não distingue gordura de músculo.</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
 
+    // SENSORES
+
+    <string name="btn_Sensores">Pesquisar</string>
+    <string name="titulo_Sensores">Sacuda o smartphone para acender o Flash</string>
+    <string name="texto_Sensores">Clique no botão \n "Pesquisar" para saber quanto e quais sensores seu dispositivo possui</string>
 
 </resources>

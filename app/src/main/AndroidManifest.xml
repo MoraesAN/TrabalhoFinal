@@ -9,10 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.TrabalhoFinal">
+        <activity android:name=".menu"></activity>
+        <activity android:name=".IMC.Sensores.SensoresActivity" />
         <activity
-            android:name=".MainActivity"
-            android:screenOrientation="portrait"
-            android:label="@string/aba1">
+            android:name=".IMC.MainActivity"
+            android:label="@string/aba1"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

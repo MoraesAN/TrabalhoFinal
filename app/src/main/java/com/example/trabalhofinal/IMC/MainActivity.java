@@ -1,28 +1,24 @@
-package com.example.trabalhofinal;
+package com.example.trabalhofinal.IMC;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.AlertDialog;
-import android.app.Dialog;
-import android.app.DialogFragment;
-import android.app.FragmentTransaction;
 import android.content.Context;
-import android.content.DialogInterface;
-import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.speech.tts.TextToSpeech;
 import android.view.KeyEvent;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.View;
-import android.view.Window;
 import android.view.inputmethod.EditorInfo;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.RadioButton;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.example.trabalhofinal.R;
 
 /*
 *
@@ -98,7 +94,7 @@ public class MainActivity extends AppCompatActivity {
                 imgIMC.setVisibility(View.VISIBLE);
                 imgIMC.setBackgroundResource(R.drawable.imcabaixo);
             }
-            txtPesoIdeal.setText(getString(R.string.pesoIdeal) + " " + String.format("%.1f", Imc.pesoIdeal(Double.parseDouble(edtAltura.getText().toString()))) + "Kg/m²");
+            //txtPesoIdeal.setText(getString(R.string.pesoIdeal) + " " + String.format("%.1f", Imc.pesoIdeal(Double.parseDouble(edtAltura.getText().toString()))) + "Kg/m²");
             fala(getString(R.string.nota));
 
             btnCalcular.setOnClickListener(v -> limpaBtn(v));
@@ -135,4 +131,10 @@ public class MainActivity extends AppCompatActivity {
         if (tts.isSpeaking()) tts.shutdown();
         super.onPause();
     }
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu, menu);
+        return true;
+    }
+
 }
