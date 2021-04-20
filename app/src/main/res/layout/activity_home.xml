@@ -11,8 +11,7 @@
         android:id="@+id/som"
         android:layout_width="80dp"
         android:layout_height="40dp"
-        android:onClick="ligaDesliga"
-         />
+        android:onClick="ligaDesliga"/>
 
     <LinearLayout
         android:layout_width="match_parent"

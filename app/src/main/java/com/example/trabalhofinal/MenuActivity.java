@@ -17,8 +17,6 @@ public class MenuActivity extends AppCompatActivity {
         getMenuInflater().inflate(R.menu.menu, menu);
         return super.onCreateOptionsMenu(menu);
 
-
-
     }
 
     public void openIMC (MenuItem item){
