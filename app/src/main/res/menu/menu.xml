@@ -4,11 +4,13 @@
     <item
         android:id="@+id/imc"
         app:showAsAction="collapseActionView"
+        android:onClick="openIMC"
         android:title="IMC"></item>
 
     <item
         android:id="@+id/sensores"
         app:showAsAction="collapseActionView"
+        android:onClick="openSensores"
         android:title="Sensores"></item>
 
 </menu>

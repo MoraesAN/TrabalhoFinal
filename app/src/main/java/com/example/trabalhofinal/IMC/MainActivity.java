@@ -18,6 +18,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.trabalhofinal.MenuActivity;
 import com.example.trabalhofinal.R;
 
 /*
@@ -25,7 +26,9 @@ import com.example.trabalhofinal.R;
 *                      @@@@@@@@@@@@@@@@ Nathalia Moraes @@@@@@@@@@@@@@@@@@@
 *
 * */
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends MenuActivity {
+
+    public static boolean tela = false;
 
     private EditText edtPeso, edtAltura;
 
@@ -106,7 +109,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onInit(int status) {
                 if (status == TextToSpeech.SUCCESS) {
-                    tts.speak(text, TextToSpeech.QUEUE_FLUSH, null);
+                    tts.speak(text, 1, null);
                 }
             }
         });
@@ -127,14 +130,23 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @Override
-    protected void onPause() {
-        if (tts.isSpeaking()) tts.shutdown();
-        super.onPause();
+    protected void onResume() {
+        tela = true;
+        super.onResume();
     }
-    public boolean onCreateOptionsMenu(Menu menu) {
-        MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.menu, menu);
-        return true;
+
+    @Override
+    protected void onPause() {
+       /* tts.speak("tchau", TextToSpeech.QUEUE_FLUSH, null);
+        if(MainActivity.tela) {
+            if (tts.isSpeaking()){
+                tts.shutdown();
+            }
+        }*/
+
+        tela = false;
+
+        super.onPause();
     }
 
 }

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".HomeActivity">
+
+    <ImageView
+        android:id="@+id/som"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:onClick="ligaDesliga"
+         />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="20dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Bem-Vindo(a)"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="Para prosseguir escolha uma opção abaixo"
+            android:textSize="24sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/HomeIMC"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:onClick="homeIMC"
+                android:text="IMC\n12/04"
+                android:textAlignment="center" />
+
+            <Button
+                android:id="@+id/HomeSensor"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:onClick="homeSensor"
+                android:text="Sensores\n19/04"
+                android:textAlignment="center" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

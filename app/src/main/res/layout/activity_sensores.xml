@@ -4,37 +4,98 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_marginTop="20dp"
     android:orientation="vertical"
-    tools:context=".IMC.Sensores.SensoresActivity">
+    tools:context=".Sensores.SensoresActivity">
 
     <TextView
         android:layout_width="match_parent"
-        android:layout_margin="10dp"
         android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:gravity="center"
         android:text="@string/titulo_Sensores" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="match_parent"
-        android:layout_margin="10dp"
         android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:gravity="center"
         android:text="@string/texto_Sensores" />
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_below="@+id/txtRespostaSensores"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="10dp"
+        android:background="@drawable/shape_sensores"
+        android:padding="15dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txtRespostaSensores"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="@color/white" />
+        </LinearLayout>
+    </ScrollView>
+
     <TextView
-        android:id="@+id/txtRespostaSensores"
+        android:id="@+id/textView3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/shape_sensores"
-        android:textColor="@color/white"
-        android:text="TEST"
-        android:layout_margin="10dp"
-        android:padding="15dp"
-        android:gravity="center"/>
+        android:gravity="center"
+        android:text="Acelerometro" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/txtX"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@color/teal_200"
+            android:gravity="center"
+            android:padding="15dp"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/txtY"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@color/teal_200"
+            android:gravity="center"
+            android:padding="15dp"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/txtZ"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@color/teal_200"
+            android:gravity="center"
+            android:padding="15dp"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
 
     <Button
         android:id="@+id/btnSensores"
         android:layout_width="match_parent"
-        android:onClick="lerSensor"
         android:layout_height="wrap_content"
+        android:onClick="lerSensor"
         android:text="@string/btn_Sensores" />
 </LinearLayout>

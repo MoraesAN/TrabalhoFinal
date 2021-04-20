@@ -2,19 +2,29 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.trabalhofinal">
 
+    <uses-permission android:name="android.permission.VIBRATE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.TrabalhoFinal">
-        <activity android:name=".menu"></activity>
-        <activity android:name=".IMC.Sensores.SensoresActivity" />
+        android:theme="@style/Theme.TrabalhoFinal"
+        android:screenOrientation="portrait">
+        <activity
+            android:name=".Sensores.SensoresActivity"
+            android:label="@string/aba2"
+            />
+        <activity android:name=".MenuActivity" />
         <activity
             android:name=".IMC.MainActivity"
             android:label="@string/aba1"
-            android:screenOrientation="portrait">
+            />
+        <activity
+            android:name=".HomeActivity"
+            android:label="Projeto Final"
+            >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -1,20 +1,20 @@
 <resources>
-    <string name="app_name">IMC</string>
+    <string name="app_name">Projeto Final</string>
+
     <string name="aba1">IMC - Índice de Massa Corpórea</string>
     <string name="pesoIdeal">Seu peso ideal - </string>
-
     <string name="imcMagreza">Abaixo - </string>
     <string name="imcNormal">Normal - </string>
     <string name="imcSobrepeso">Sobrepeso - </string>
     <string name="imcObeso">Obesidade - </string>
     <string name="imcObesoGrave">Obesidade Grave - </string>
-
     <string name="nota">O IMC é amplamente utilizado para avaliar se uma pessoa tem um peso saudável. No entanto, o cálculo não distingue gordura de músculo.</string>
 
     // SENSORES
 
+    <string name="aba2">Sensores</string>
     <string name="btn_Sensores">Pesquisar</string>
     <string name="titulo_Sensores">Sacuda o smartphone para acender o Flash</string>
-    <string name="texto_Sensores">Clique no botão \n "Pesquisar" para saber quanto e quais sensores seu dispositivo possui</string>
+    <string name="texto_Sensores">Clique no botão "Pesquisar" para saber quanto\n e quais sensores seu dispositivo possui</string>
 
 </resources>
